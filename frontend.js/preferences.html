@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>User Preferences</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="nav-title">
+        🎯 Event Recommendation System
+    </div>
+
+    <div class="nav-links">
+
+        <a href="dashboard.html">Dashboard</a>
+
+        <a href="events.html">Explore</a>
+
+        <a href="preferences.html">Preferences</a>
+
+        <a href="registered.html">Registered</a>
+
+        <a href="availability.html">Free Time</a>
+
+        <button onclick="logout()">Logout</button>
+
+    </div>
+
+</nav>
+
+
+<main class="container">
+
+    <div class="page-header">
+
+        <h1>⚙️ Your Preferences</h1>
+
+        <p>
+            Tell us what kind of events you prefer.
+        </p>
+
+    </div>
+
+
+    <div class="form-card">
+
+        <form id="preferencesForm">
+
+
+            <label>
+                Preferred Location
+            </label>
+
+            <input
+                type="text"
+                id="preferredLocation"
+                placeholder="Example: Coimbatore"
+            >
+
+
+            <label>
+                Preferred Mode
+            </label>
+
+            <select id="preferredMode">
+
+                <option value="">
+                    Any Mode
+                </option>
+
+                <option value="online">
+                    Online
+                </option>
+
+                <option value="offline">
+                    Offline
+                </option>
+
+                <option value="hybrid">
+                    Hybrid
+                </option>
+
+            </select>
+
+
+            <label>
+                Maximum Budget ₹
+            </label>
+
+            <input
+                type="number"
+                id="budget"
+                placeholder="Example: 500"
+                min="0"
+            >
+
+
+            <label>
+                Interests
+            </label>
+
+            <input
+                type="text"
+                id="interests"
+                placeholder="Python, AI, Robotics, Coding"
+            >
+
+            <small>
+                Separate interests using commas.
+            </small>
+
+
+            <label>
+                Preferred Date
+            </label>
+
+            <input
+                type="date"
+                id="preferredDate"
+            >
+
+
+            <label>
+                Preferred Start Time
+            </label>
+
+            <input
+                type="time"
+                id="preferredStartTime"
+            >
+
+
+            <label>
+                Preferred End Time
+            </label>
+
+            <input
+                type="time"
+                id="preferredEndTime"
+            >
+
+
+            <label>
+                Maximum Distance (km)
+            </label>
+
+            <input
+                type="number"
+                id="maxDistance"
+                placeholder="Example: 20"
+                min="0"
+            >
+
+
+            <button type="submit">
+                💾 Save Preferences
+            </button>
+
+        </form>
+
+
+        <p id="preferencesMessage"></p>
+
+    </div>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Explore Events</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="nav-title">
+        🎯 Event Recommendation System
+    </div>
+
+    <div class="nav-links">
+
+        <a href="dashboard.html">Dashboard</a>
+
+        <a href="events.html">Explore</a>
+
+        <a href="preferences.html">Preferences</a>
+
+        <a href="registered.html">Registered</a>
+
+        <a href="availability.html">Free Time</a>
+
+        <button onclick="logout()">Logout</button>
+
+    </div>
+
+</nav>
+
+
+<main class="container">
+
+    <div class="page-header">
+
+        <h1>🔎 Explore Events</h1>
+
+        <p>
+            Discover events from your event database.
+        </p>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search events, location, category..."
+        >
+
+        <button onclick="searchEvents()">
+            🔍 Search
+        </button>
+
+        <button onclick="loadEvents()">
+            Show All
+        </button>
+
+    </div>
+
+
+    <!-- RECOMMENDED -->
+
+    <h2>⭐ Recommended For You</h2>
+
+    <div
+        id="recommendedEvents"
+        class="event-grid">
+
+        <p>Loading...</p>
+
+    </div>
+
+
+    <!-- ALL EVENTS -->
+
+    <h2>📅 All Events</h2>
+
+    <div
+        id="events"
+        class="event-grid">
+
+        <p>Loading events...</p>
+
+    </div>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Free Time</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="nav-title">
+        🎯 Event Recommendation System
+    </div>
+
+    <div class="nav-links">
+
+        <a href="dashboard.html">Dashboard</a>
+
+        <a href="events.html">Explore</a>
+
+        <a href="preferences.html">Preferences</a>
+
+        <a href="registered.html">Registered</a>
+
+        <a href="availability.html">Free Time</a>
+
+        <button onclick="logout()">Logout</button>
+
+    </div>
+
+</nav>
+
+
+<main class="container">
+
+    <div class="page-header">
+
+        <h1>🕒 My Free Time</h1>
+
+        <p>
+            Tell the system when you are free.
+        </p>
+
+    </div>
+
+
+    <!-- ADD FREE TIME -->
+
+    <div class="form-card">
+
+        <form id="availabilityForm">
+
+
+            <label>
+                Date
+            </label>
+
+            <input
+                type="date"
+                id="availabilityDate"
+                required
+            >
+
+
+            <label>
+                Start Time
+            </label>
+
+            <input
+                type="time"
+                id="availabilityStart"
+                required
+            >
+
+
+            <label>
+                End Time
+            </label>
+
+            <input
+                type="time"
+                id="availabilityEnd"
+                required
+            >
+
+
+            <button type="submit">
+                💾 Save Free Time
+            </button>
+
+        </form>
+
+
+        <p id="availabilityMessage"></p>
+
+    </div>
+
+
+    <!-- MATCHING EVENTS -->
+
+    <section>
+
+        <h2>🎯 Events During My Free Time</h2>
+
+        <button onclick="loadFreeTimeEvents()">
+            🔄 Find Matching Events
+        </button>
+
+
+        <div
+            id="freeTimeEvents"
+            class="event-grid">
+
+            <p>
+                Add your free time and find matching events.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

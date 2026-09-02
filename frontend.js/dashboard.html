@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="nav-title">
+        🎯 Event Recommendation System
+    </div>
+
+    <div class="nav-links">
+
+        <a href="dashboard.html">Dashboard</a>
+
+        <a href="events.html">Explore</a>
+
+        <a href="preferences.html">Preferences</a>
+
+        <a href="registered.html">Registered</a>
+
+        <a href="availability.html">Free Time</a>
+
+        <button onclick="logout()">
+            Logout
+        </button>
+
+    </div>
+
+</nav>
+
+
+<main class="container">
+
+    <section class="welcome">
+
+        <h1>
+            Welcome, <span id="username">User</span> 👋
+        </h1>
+
+        <p>
+            Find events that match your interests and schedule.
+        </p>
+
+    </section>
+
+
+    <!-- STATISTICS -->
+
+    <section class="stats">
+
+        <div class="stat-card">
+
+            <h2 id="totalEvents">
+                0
+            </h2>
+
+            <p>Total Events</p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <h2 id="registeredCount">
+                0
+            </h2>
+
+            <p>Registered Events</p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <h2 id="notificationCount">
+                0
+            </h2>
+
+            <p>Notifications</p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <h2 id="availabilityCount">
+                0
+            </h2>
+
+            <p>Free Time Slots</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- QUICK ACTIONS -->
+
+    <section>
+
+        <h2>Quick Actions</h2>
+
+        <div class="quick-grid">
+
+            <a href="events.html" class="quick-card">
+                🔎
+                <h3>Explore Events</h3>
+                <p>Find events recommended for you.</p>
+            </a>
+
+
+            <a href="preferences.html" class="quick-card">
+                ⚙️
+                <h3>Set Preferences</h3>
+                <p>Tell us what events you like.</p>
+            </a>
+
+
+            <a href="registered.html" class="quick-card">
+                📋
+                <h3>My Events</h3>
+                <p>View events you registered for.</p>
+            </a>
+
+
+            <a href="availability.html" class="quick-card">
+                🕒
+                <h3>My Free Time</h3>
+                <p>Find events during your free time.</p>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- RECOMMENDATIONS -->
+
+    <section>
+
+        <h2>⭐ Recommended For You</h2>
+
+        <div id="recommendations"
+             class="event-grid">
+
+            <p>Loading recommendations...</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- NOTIFICATIONS -->
+
+    <section>
+
+        <h2>🔔 Notifications</h2>
+
+        <div id="notifications"
+             class="notification-list">
+
+            <p>Loading notifications...</p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
